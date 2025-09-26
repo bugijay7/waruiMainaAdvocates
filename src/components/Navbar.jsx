@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <div className="navbar shadow-md px-6 py-8 bg-gray-200">
+    <div className="navbar shadow-md px-6 py-4 bg-gray-200">
       <div className="max-w-[1400px] mx-auto w-full flex justify-between items-center">
         
         {/* Left (Logo) */}
@@ -24,16 +24,16 @@ function Navbar() {
         {/* Right (CTA Button - Desktop) */}
         <div className="navbar-end hidden lg:flex">
           <a href="#cta">
-            <button className="btn btn-outline text-black border-1 border-black py-4 px-3 font-bold hover:bg-cyan-800 hover:text-white hover:border-gray-800 transition">
+            <button className="btn btn-outline text-black border border-black py-2 px-4 font-bold hover:bg-cyan-800 hover:text-white hover:border-cyan-800 transition">
               Consultation
             </button>
           </a>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="lg:hidden">
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost text-black">
+            <label tabIndex={0} className="btn btn-ghost text-black p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -46,15 +46,18 @@ function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-4 shadow bg-white rounded-lg w-52 text-black space-y-2"
+              className="menu menu-compact dropdown-content mt-3 p-4 shadow bg-white rounded-lg w-56 text-black space-y-2"
             >
-              <li><a href="#hero" className="hover:underline transition">Home</a></li>
-              <li><a href="#practice-areas" className="hover:underline transition">Practice Areas</a></li>
-              <li><a href="#profile" className="hover:underline transition">Attorneys</a></li>
-              <li><a href="#location" className="hover:underline transition">Location</a></li>
-              <li><a href="#contact" className="hover:underline transition">Contact</a></li>
+              <li><a href="#hero" className="hover:text-cyan-800 transition">Home</a></li>
+              <li><a href="#practice-areas" className="hover:text-cyan-800 transition">Practice Areas</a></li>
+              <li><a href="#profile" className="hover:text-cyan-800 transition">Attorneys</a></li>
+              <li><a href="#location" className="hover:text-cyan-800 transition">Location</a></li>
+              <li><a href="#contact" className="hover:text-cyan-800 transition">Contact</a></li>
               <li>
-                <a href="#cta" className="font-semibold text-black hover:underline transition">
+                <a
+                  href="#cta"
+                  className="font-semibold text-cyan-900 border border-cyan-900 py-2 px-3 rounded-lg hover:bg-cyan-800 hover:text-white transition block text-center"
+                >
                   Consultation
                 </a>
               </li>
